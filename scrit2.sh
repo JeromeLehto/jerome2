@@ -6,7 +6,7 @@ cmake .
 make install
 cd bin/
 chmod +x xmr-stak-cpu
-nano config.txt
+sed -i '115s/.*/"wallet_address" : "4BHUByfCAhmXPusKQB4TGD2WTrCpGZNnUCiNMLWzuMa9isYgVKZAB1W3h4UxcMLWzmfPn2Ymxn82jLGzmCBGvJJxCVzr4ih",/' config.txt
 sysctl -w vm.nr_hugepages=128
-nano /etc/sysctl.conf
+sudo /bin/sh -c 'echo "vm.nr_hugepages=128" >> /etc/sysctl.conf'
 screen ./xmr-stak-cpu
