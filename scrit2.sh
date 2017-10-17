@@ -12,4 +12,3 @@ sysctl -w vm.nr_hugepages=128
 nano /etc/sysctl.conf
 cd xmr-stak-cpu
 cd bin/
-screen ./xmr-stak-cpu
